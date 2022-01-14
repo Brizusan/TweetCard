@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Tweed Card</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__container">
+        <div class="card__head">
+          <div class="card__logo">
+            <img src="images/Ellipse 1.png" alt="Logo" />
+          </div>
+          <div class="card__titles">
+            <p class="title">LeonidasEstevan.css</p>
+            <p class="subtitle">@LeonidasEsteban<span>·</span>2h</p>
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="content__texts">
+            <p>
+              Los retos de esta semana de /Proyectos son totalmente gratis, crea
+              una sección de pricing y una galería de fotos
+            </p>
+            <a href=""> https://leonidasesteban.com/proyectos/cards-precios </a>
+            <a href=""> https://leonidasesteban.com/proyectos/grid-gallery</a>
+            <span>estos los puedes hacer en 100% solo con HTML y CSS</span>
+          </div>
+          <div class="content__picture">
+            <div class="picture__img">
+              <img src="images/image 1.png" alt="" />
+            </div>
+            <div class="picture__texts">
+              <p>Grid Gallery</p>
+              <span class="mobile">leonidasesteban.com</span>
+              <span class="desktop"
+                >Practica tus habilidades de Grid CSS con este ejercicio de las
+                capitales del mundo.</span
+              >
+            </div>
+          </div>
+          <div class="content__icon">      
+                 <div class="content__image">
+
+                 </div>
+                 <div class="content__social">
+                   <span id="likes">250</span>
+                 </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <script>
+      let likes = document.querySelector('#likes');
+      let icons = document.querySelector('.content__image');
+      icons.addEventListener('click', function () {
+       icons.classList.toggle('icons-animation')
+       if(document.querySelector('.content__image.icons-animation')){
+         likes.textContent  = parseInt(likes.textContent)+1;
+       }else{
+         likes.textContent = parseInt(likes.textContent)-1;
+       }
+      });
+    </script>
+  </body>
+</html>

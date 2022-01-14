@@ -1,0 +1,164 @@
+:root { 
+  --white: #ffffff; 
+  --bg: #000000; 
+  --blue: #2797dd; 
+  --grey: #6e767d; 
+  --pink: #f72381; 
+  --body1-regular: 400 1rem/1.75rem Poppins; 
+  --body1-bold: 700 1rem/1.75rem Poppins; 
+  --body2-bold: 700 0.75rem/1.5rem Poppins; 
+  --body2-regular: 400 0.75rem/1.375rem Poppins;   
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: var(--white);
+  font: var(--body2-regular);
+  background-color: var(--bg);
+  margin:0 auto;
+}
+.card{
+  max-inline-size: 700px;
+}
+.card__container{
+  padding: 16px;
+}
+.card__head{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.card__logo{
+  width: 48px;
+  height: 48px;
+}
+.card__logo img{
+  width: 100%;
+}
+a{
+  color: var(--blue);
+}
+.card__titles .title{
+  font: var(--body2-bold);
+  line-height: 24px;
+}
+.card__titles .subtitle{
+  font: var(--body2-regular);
+  color:var(--grey);
+}
+.card__titles span{
+  font-size: 15px;
+}
+.card__content{
+  padding-inline: 62px 0px;
+  padding-block: 8px 16px;
+}
+.card__content .content__texts{
+  line-height: 22px;
+}
+.content__texts{
+  padding-block-end: 16px;
+}
+.content__picture{
+  display: flex;
+  gap: 16px;  
+  border : 1px solid var(--grey);
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+.picture__texts{
+  padding: 16px 16px 0 0;
+}
+.picture__texts p{
+  font: var(--body2-bold);
+}
+.picture__texts span{
+  font: var(--body2-regular);
+  color: var(--grey);
+}
+.picture__texts .desktop{
+  display: none;
+}
+.picture__img img{
+  width: 100%;
+  height: 100%;
+}
+.content__icon{
+  /* padding-block:16px;  */
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+.content__icon span{
+  color: gray;
+}
+.content__image{
+  width: 100px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.icons-animation {
+  animation: heart-beat 0.25s steps(28) 1 forwards;
+}
+
+@keyframes heart-beat {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+@media(min-width : 600px){
+  body{
+    padding-block-start: 10%;
+    font: var(--body1-regular);
+  }
+  .card{
+    border: 1px solid var(--grey) ;
+    margin: 0 auto;    
+    box-sizing: border-box;
+  }
+  .card__logo{
+    width: 64px;
+    height: 64px;
+  }
+  .card__titles{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+  }
+  .card__titles .title{
+    font: var(--body1-bold);
+  }
+  .card__titles .subtitle{
+    font: var(--body1-regular)
+  }
+  .picture__texts p{
+    font: var(--body1-regular);
+  }
+  .picture__texts .mobile{
+    display: none;
+  }
+  .picture__texts .desktop{
+    display: block;
+    font: var(--body1-regular);
+  }
+  .picture__img{
+    width: 160px;
+    height: auto;
+  }
+  .card__content{
+    padding-block: 0;
+    padding-inline: 80px 0;
+  }
+  hr{
+    display: none;
+  }
+}
